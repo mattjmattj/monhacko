@@ -1,0 +1,23 @@
+{
+	"name": "mattjmattj/monhacko",
+	"type": "library",
+	"description": "Monads for the Hack programming language",
+	"version": "0.0.1",
+	"authors": [{
+		"name": "Matthias Jouan",
+		"email": "matthias.jouan@gmail.com"
+	}],
+	"license": "BSD-2-Clause",
+	"homepage": "http://github.com/mattjmattj/monhacko",
+	"require": {
+		"hhvm": ">=3.5.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~4.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"Monhacko\\": "lib/Monhacko"
+		}
+	}
+}
