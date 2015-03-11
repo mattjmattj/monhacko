@@ -14,7 +14,7 @@ class Maybe<T> implements Monad<T> {
 		return new self($value);
 	}
 	
-	public static function nothing<Tnothing> () : Maybe<Tnothing> {
+	public static function nothing () : Maybe<T> {
 		return new self();
 	}
 	
