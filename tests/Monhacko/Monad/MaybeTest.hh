@@ -5,8 +5,6 @@ namespace Monhacko\Test;
 use \PHPUnit_Framework_TestCase as TestCase;
 
 use \Monhacko\Monad\Maybe;
-use \Monhacko\Monad\Just;
-use \Monhacko\Monad\Nothing;
 
 class MaybeTest extends TestCase {
 	
