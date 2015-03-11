@@ -11,7 +11,7 @@ class Out<T> implements Monad<T> {
 		private T $value
 	) {}
 	
-	public static function write<T> (T $value) : Out<T> {
+	public static function write<Tout> (Tout $value) : Out<Tout> {
 		echo $value;
 		return new Out($value);
 	}
