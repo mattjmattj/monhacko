@@ -26,6 +26,10 @@ class Maybe<T> implements Monad<T> {
 		}
 	}
 	
+	public function then<Tfn> ((function():Monad<Tfn>) $fn) : Monad<Tfn> {
+		return $fn();
+	}
+	
 	public function value () : ?T {
 		return $this->value;
 	}

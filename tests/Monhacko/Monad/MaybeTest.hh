@@ -48,4 +48,22 @@ class MaybeTest extends TestCase {
 		$this->assertEquals(Maybe::nothing(), $result);
 		$this->assertEquals(null, $result->value());
 	}
+	
+	public function testThen () : void {
+		
+		$maybe = Maybe::nothing();
+		
+		$fn = function ($x, &$buffer) {
+			return function() use ($x, &$buffer) {
+				$buffer[] = $x;
+				return Maybe::nothing();
+			};
+		};
+
+		$buffer = [];
+		
+		$maybe->then($fn(1,$buffer))->then($fn(2,$buffer));
+		
+		$this->assertEquals([1,2], $buffer);
+	}
 }
