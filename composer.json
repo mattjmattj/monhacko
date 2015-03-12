@@ -9,11 +9,18 @@
 	}],
 	"license": "BSD-2-Clause",
 	"homepage": "http://github.com/mattjmattj/monhacko",
+	"minimum-stability": "dev",
+	"repositories": [
+		{
+			"url": "https://github.com/mattjmattj/HackUnit.git",
+			"type": "git"
+		}
+	],
 	"require": {
 		"hhvm": ">=3.5.0"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "~4.5"
+		"hackpack/hackunit": "dev-feature-callable-expectation-to-output-string"
 	},
 	"autoload": {
 		"psr-4": {
