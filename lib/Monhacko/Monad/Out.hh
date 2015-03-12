@@ -13,7 +13,7 @@ class Out<T> implements Monad<T> {
 	
 	public static function write (T $value) : Out<T> {
 		echo $value;
-		return new Out($value);
+		return new self($value);
 	}
 	
 	public function bind<Tfn> ((function(T):Monad<Tfn>) $fn) : Monad<Tfn> {
